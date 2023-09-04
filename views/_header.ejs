@@ -30,7 +30,11 @@
         <button id="btn"><img src="https://cdn.iconscout.com/icon/free/png-512/free-search-1767866-1502119.png?f=avif&w=256" alt="" style="height: 70%; width: 100%;"></button>
     </div>
     <div id="others">
-        <a href="/users/signin"><button type="button" class="btn btn-outline-info" id="loginbtn" style="width:50%">LOGIN</button></a>
+        <% if(locals.user){ %>
+            <a href="/users/signin"><button type="button" class="btn btn-light" id="loginbtn" style="width:50%">Profile</button></a>
+        <% }else{ %>
+            <a href="/users/signin"><button type="button" class="btn btn-outline-info" id="loginbtn" style="width:50%">LOGIN</button></a>
+        <% } %>
         <div id="cnt">0</div>
         <a href=""><img src="https://cdn.iconscout.com/icon/premium/png-512-thumb/cart-1426700-1205358.png?f=avif&w=256" alt=""></a>
     </div>

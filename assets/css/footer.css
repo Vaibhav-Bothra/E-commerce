@@ -63,6 +63,10 @@ ul{
 .footer-col ul li a{
     color: #bbbbbb !important;
 }
+.footer-col ul li a:hover{
+    color: #e2dbdb !important;
+    font-size: 17px;
+}
 .footer-col .social-links{
     margin-top: 6%;
 }
