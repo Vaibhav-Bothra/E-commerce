@@ -1,0 +1,97 @@
+#loginbtn{
+    visibility: hidden;
+}
+
+.login-container{
+    width: 30%;
+    margin: auto;
+    border: 2px solid black;
+    background-color: rgb(194, 204, 188);
+    justify-content: center;
+    text-align: center;
+    height: 75%;
+    box-sizing: border-box;
+    padding-top: 2%;
+    /* background-color: rgba(255, 255, 255, 0.171); */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    margin-bottom: 4%;
+    margin-top: 2%;
+}
+
+.login-container input{
+    font-size: 15px;
+    height: 23px;
+    margin-left:8px ;
+    background: none;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid rgb(0, 0, 0);
+    color: black;
+}
+.user h3{
+    font-size: 20px;
+    text-align: left;
+    margin-top: 45px;
+    margin-bottom: 10px;
+    padding-left: 88px;
+}
+
+.pwd h3, .mail h3{    
+    font-size: 20px;
+    text-align: left;
+    margin-bottom: 10px;
+    padding-left: 88px;
+}
+
+.login{
+    text-align: center;
+    text-decoration:underline;
+}
+
+.sub{
+    margin-top:18px ;
+}
+
+.btn1{
+    font-weight: bold;
+    font-size: 16px;
+    border: 2px solid black;
+    background-color: rgb(100, 33, 132);
+    padding: 8px;
+    border-radius: 10px;
+}
+
+.btn1:hover{
+    cursor: pointer;
+    background-color: rgb(121, 144, 216);
+    font-size: 17px;
+}
+
+#i{
+    height: 17px;
+    padding-top: 6px;
+    padding-right: 10px;
+    padding-left: 0;
+}
+
+#sym{
+    height: 17px;
+    float: right;
+    padding-top: 6px;
+}
+
+.up{
+    margin-top: 45px;
+    font-size: 16px;
+}
+.signup1{
+    text-decoration: none;
+}
+.logo1{
+    width: 240px;
+    height: 140px;
+    display: flex;
+}
+::placeholder{
+    color: black;
+}

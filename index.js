@@ -1,6 +1,8 @@
 const express = require('express');
 const port = 8000;
 const expressLayouts = require('express-ejs-layouts');
+const session = require('express-session');
+const passport = require('passport');
 
 //git init for making git commits
 

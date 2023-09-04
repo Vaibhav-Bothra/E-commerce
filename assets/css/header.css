@@ -16,6 +16,25 @@
 
 #search{
     width: 46%;
+    position: relative;
+}
+
+#searchoptions{
+    position: absolute;
+}
+
+#searchoptions li{
+    font-size: medium;
+    background-color: rgb(202, 190, 204);
+    display: none;
+}
+
+#searchoptions a{
+    text-decoration: none;
+}
+
+#searchoptions li:hover{
+    background-color: whitesmoke;
 }
 
 #search_item{

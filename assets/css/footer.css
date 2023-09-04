@@ -55,11 +55,13 @@ ul{
 }
 .footer-col ul li{
     font-size: 16px;
-    color: #ffffff;
     text-decoration: none;
     font-weight: 300;
-    color: #bbbbbb;
+    color: #bbbbbb !important;
     display: block;
+}
+.footer-col ul li a{
+    color: #bbbbbb !important;
 }
 .footer-col .social-links{
     margin-top: 6%;
