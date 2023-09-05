@@ -1,0 +1,22 @@
+.iphone_main{
+    border: 2px solid black;
+    display: flex;
+    height: 53%;
+    margin: 2%;
+}
+
+.iphone_img{
+    width: 21%;
+}
+
+.iphone_desc{
+    border-left: 2px solid black;
+    padding: 3%;
+    background-color: antiquewhite;
+    width: 79%;
+}
+
+.iphone_img img{
+    height: 100%;
+    width:100%;
+}
