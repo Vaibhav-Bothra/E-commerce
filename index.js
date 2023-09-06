@@ -4,11 +4,15 @@ const expressLayouts = require('express-ejs-layouts');
 const session = require('express-session');
 const passport = require('passport');
 const passportLocal = require('./config/passport-local-strategy');
+const bodyParser = require('body-parser');
 
 //git init for making git commits
 
 const app = express();
 app.use(expressLayouts);
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
 app.set('layout extractStyles', true);
 app.set('layout extractScripts', true);
 
@@ -16,7 +20,7 @@ app.set('view engine', 'ejs');
 app.set('views','views');
 
 app.use(session({
-    name:"dirProject",
+    name:"Ecommerce",
     secret: "blahsomething", //this is the key which is used for encrypting the user id of the cookie.
     saveUninitialized: false,
     resave: false,

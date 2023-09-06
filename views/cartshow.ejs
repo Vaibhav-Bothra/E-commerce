@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="/css/cartshow.css">
+
+<% for(let i=0;i<image.length;i++){ %>
+    <div class="iphone_main">
+        <div class="iphone_img">
+            <img src="../<%= image[i] %>" alt="">
+        </div>
+        <div class="iphone_desc" style="background-color: cadetblue;">
+            <h1 style="font-family: 'Times New Roman', Times, serif; font-weight: 900;"><%= productnames[i] %></h1>
+            <h3 style="font-family: sans-serif; font-weight: 600;"><%= price[i] %></h3>
+            <h3>Qty: <%= qts[i] %></h3>
+            <br>
+            <a href="add/<%= i %>"><img src="https://cdn.iconscout.com/icon/premium/png-512-thumb/add-new-2694144-2236144.png?f=avif&w=256" alt=""></a>
+            <a href="subtract/<%= i %>"><img src="https://cdn.iconscout.com/icon/premium/png-512-thumb/subtract-3310446-2771869.png?f=avif&w=256" alt=""></a>
+            <a href="delete/<%= i %>"><img src="https://cdn.iconscout.com/icon/free/png-512/free-delete-736-470378.png?f=avif&w=256" alt=""></a>
+            <br>
+        </div>
+    </div>
+<% } %>
+<div class="qtypri">
+    <div class="qty">
+        Total Quantity: <%= totalcnt %>
+    </div>
+    <div class="pri">
+        Total Price: <%= totalmoney %>
+    </div>
+</div>
+<a href="" style="text-decoration: none;"><button class="btn btn-dark buynow"><h4 style="color: antiquewhite;">Buy Now</h4></button></a>

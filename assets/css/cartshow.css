@@ -1,0 +1,51 @@
+.iphone_main{
+    border: 2px solid black;
+    display: flex;
+    height: 53%;
+    margin: 2%;
+}
+
+.iphone_img{
+    width: 21%;
+}
+
+.iphone_desc{
+    border-left: 2px solid black;
+    padding: 3%;
+    background-color: cadetblue;
+    width: 79%;
+}
+
+.iphone_desc a img{
+    width: 6%;
+    height: 22%;
+}
+
+.iphone_img img{
+    height: 100%;
+    width:100%;
+}
+
+.qtypri{
+    text-align: center;
+    font-size: xx-large;
+    background-color: rgb(230, 190, 139);
+    text-decoration: underline;
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+}
+
+.qty{
+    width: 50%;
+}
+
+.pri{
+    width: 50%;
+}
+
+.buynow{
+    height: 10%;
+    display: block;
+    width: 10%;
+    margin: 2% 43%;
+}

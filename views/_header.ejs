@@ -6,7 +6,7 @@
     </div>
     <div id="link">
         <ul id="links">
-            <li><a href="#">Home</a></li>
+            <li><a href="/">Home</a></li>
             <li><a href="#abt">About Us</a></li>
             <li><a href="#contact_us">Contact Us</a></li>
         </ul>
@@ -35,8 +35,12 @@
         <% }else{ %>
             <a href="/users/signin"><button type="button" class="btn btn-outline-info" id="loginbtn" style="width:50%">LOGIN</button></a>
         <% } %>
-        <div id="cnt">0</div>
-        <a href=""><img src="https://cdn.iconscout.com/icon/premium/png-512-thumb/cart-1426700-1205358.png?f=avif&w=256" alt=""></a>
+        <% if(locals.user){ %>
+            <div id="cnt"><%= locals.cart_cnt %></div>
+        <% }else{ %>
+            <div id="cnt">0</div>
+        <% } %>
+        <a href="/users/cartshow"><img src="https://cdn.iconscout.com/icon/premium/png-512-thumb/cart-1426700-1205358.png?f=avif&w=256" alt=""></a>
     </div>
 </div>
 

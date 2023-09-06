@@ -3,10 +3,9 @@ const Iphone = require('../models/iphone');
 module.exports.display = async function(req,res){
     let a = [];
     await Iphone.find({}).then((iphones)=>{
-        console.log(iphones);
         for(let i=0; i<iphones.length; i++){
             var b = [];
-            b.push(iphones[i].img,iphones[i].prodname,iphones[i].desc,iphones[i].price);
+            b.push(iphones[i].img,iphones[i].prodname,iphones[i].desc,iphones[i].price,iphones[i]._id);
             a.push(b);
         }
     })

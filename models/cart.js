@@ -6,19 +6,24 @@ const cartSchema = new mongoose.Schema({
     img: [
         {
         type: String,
-        required: true,
+        unique: true
         }
     ],
     prodname: [
         {
         type: String,
-        required: true
+        unique: true
         }
     ],
     price: [
         {
         type: String,
-        required: true
+        unique: true
+        }
+    ],
+    count_item: [
+        {
+            type: Number
         }
     ],
     user: {

@@ -5,7 +5,7 @@ module.exports.display = async function(req,res){
     await Samsung.find({}).then((samsung)=>{
         for(let i=0; i<samsung.length; i++){
             var b = [];
-            b.push(samsung[i].img,samsung[i].prodname,samsung[i].desc,samsung[i].price);
+            b.push(samsung[i].img,samsung[i].prodname,samsung[i].desc,samsung[i].price,samsung[i]._id);
             a.push(b);
         }
     })
