@@ -15,11 +15,12 @@
         <input type="text" placeholder="Search for items..." id="search_item" style="height: 70%; width: 100%;">
         <div id="searchoptions">
             <ul>
-                <li class="options" id="iphone"><a href="">iPhone</a></li>
+                <li class="options" id="iphone"><a href="/iphones">iPhone</a></li>
                 <li class="options" id="clothing"><a href="">Clothing for Women</a></li>
                 <li class="options" id="refrigerator"><a href="">Refrigerator</a></li>
                 <li class="options" id="sports"><a href="">Sports</a></li>
-                <li class="options" id="samsung"><a href="">Samsung</a></li>
+                <li class="options" id="samsung"><a href="/samsung">Samsung</a></li>
+                <li class="options" id="samsung"><a href="">One Plus</a></li>
                 <li class="options" id="gym"><a href="">Gym</a></li>
                 <li class="options" id="hplaptops"><a href="">HP Laptops</a></li>
                 <li class="options" id="boatairdopes"><a href="">Boat Airdopes</a></li>
@@ -34,11 +35,6 @@
             <a href="/users/profile"><button type="button" class="btn btn-light" id="loginbtn" style="width:50%">Profile</button></a>
         <% }else{ %>
             <a href="/users/signin"><button type="button" class="btn btn-outline-info" id="loginbtn" style="width:50%">LOGIN</button></a>
-        <% } %>
-        <% if(locals.user){ %>
-            <div id="cnt"><%= locals.cart_cnt %></div>
-        <% }else{ %>
-            <div id="cnt">0</div>
         <% } %>
         <a href="/users/cartshow"><img src="https://cdn.iconscout.com/icon/premium/png-512-thumb/cart-1426700-1205358.png?f=avif&w=256" alt=""></a>
     </div>

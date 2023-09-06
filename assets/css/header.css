@@ -55,16 +55,6 @@
     width: 23%;
 }
 
-#cnt{
-    display: inline;
-    position: absolute;
-    right: 14%;
-    font-size: small;
-    width: 10%;
-    border-radius: 70%;
-    background-color: aliceblue;
-}
-
 #link{
     width: 30%;
     margin: auto;

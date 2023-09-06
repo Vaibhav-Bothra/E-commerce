@@ -1,0 +1,28 @@
+.mainbox{
+    display: flex;
+}
+
+.reviews{
+    width: 70%;
+}
+
+.singlereview{
+    background-color: azure;
+    margin-bottom: 2%;
+}
+
+.reviewform{
+    width: 30%;
+    padding: 0 2%;
+}
+
+.reviewform form{
+
+}
+
+.reviewform input, .reviewform textarea{
+    font-size: large;
+    display: block;
+    margin-bottom: 2%;
+    width: 100%;
+}

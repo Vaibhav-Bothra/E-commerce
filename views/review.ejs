@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="/css/review.css">
+<div style="text-align: center; font-size: xx-large; text-decoration: underline; font-family: 'Times New Roman', Times, serif; margin-bottom: 2%;">
+    Review Section
+</div>
+<div class="mainbox">
+    <div class="reviews">
+        <% for(let i=0;i<review_users.length;i++){ %>
+            <div class="singlereview">
+                <h4 style="text-align: center;">Product Name: <%= review_products[i] %></h4>
+                <h5>Review: <%= review_desc[i] %></h5>
+                <h6>Username: <%= review_users[i] %></h6>
+            </div>
+        <% } %>
+    </div>
+    <div class="reviewform">
+        <form action="/users/createreview" method="POST">
+            <input type="text" name="prdct" placeholder="Name the product...">
+            <textarea type="text" name="dsc" placeholder="Write your review..." cols="30" rows="10"></textarea>
+            <input type="submit" value="Review">
+        </form>
+    </div>
+</div>

@@ -1,4 +1,5 @@
 const Cart = require('../models/cart');
+const Orders = require('../models/orderplaced');
 
 module.exports.add = async function(req,res){
     const coll = require(`../models/${req.query.key}`);
@@ -83,7 +84,7 @@ module.exports.addqty = function(req,res){
 
 module.exports.subtractqty = function(req,res){
     Cart.findOne({user:req.user._id}).then((item)=>{
-        if(item.count_item[req.params.idx]>=1){
+        if(item.count_item[req.params.idx]>1){
             item.count_item[req.params.idx]-=1;
             item.save();
         }
@@ -112,4 +113,20 @@ module.exports.delete = function(req,res){
         item.save();
     })
     return res.redirect('/users/cartshow');
+}
+
+module.exports.buy = function (req, res) {
+    Cart.findOne({user: req.user._id}).then((order)=>{
+        Orders.create({
+            img: order.img,
+            prodname: order.prodname,
+            price: order.price,
+            count_item: order.count_item,
+            user: order.user
+        });
+        Cart.findOneAndDelete({user: req.user._id}).then((del)=>{
+            console.log(del);
+        })
+    })
+    return res.redirect('/');
 }

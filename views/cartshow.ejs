@@ -1,6 +1,8 @@
 <link rel="stylesheet" href="/css/cartshow.css">
 
+<% let flag=0 %>
 <% for(let i=0;i<image.length;i++){ %>
+    <% flag=1 %>
     <div class="iphone_main">
         <div class="iphone_img">
             <img src="../<%= image[i] %>" alt="">
@@ -17,12 +19,18 @@
         </div>
     </div>
 <% } %>
-<div class="qtypri">
-    <div class="qty">
-        Total Quantity: <%= totalcnt %>
+<% if(flag==1){ %>
+    <div class="qtypri">
+        <div class="qty">
+            Total Quantity: <%= totalcnt %>
+        </div>
+        <div class="pri">
+            Total Price: <%= totalmoney %>
+        </div>
     </div>
-    <div class="pri">
-        Total Price: <%= totalmoney %>
+    <a href="/users/buy" style="text-decoration: none;"><button class="btn btn-dark buynow"><h4 style="color: antiquewhite;">Buy Now</h4></button></a>
+<% }else{ %>
+    <div style="font-size: xx-large; color: rgb(236, 167, 77); text-align: center;">
+        Cart is Empty!!
     </div>
-</div>
-<a href="" style="text-decoration: none;"><button class="btn btn-dark buynow"><h4 style="color: antiquewhite;">Buy Now</h4></button></a>
+<% } %>

@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="/css/cartshow.css">
+
+<div style="display: flex;">
+    <div style="font-size: xx-large; text-decoration: underline; font-family: 'Times New Roman', Times, serif; text-align: center; width: 70%;">
+        Profile
+    </div>
+    <div style="width: 30%;">
+        <a href="/users/signout"><button style="height: 100%; width: 30%; font-size: larger; float: right; border: none;">Logout</button></a>
+    </div>
+</div>
+<div style="font-size: larger; font-family: 'Times New Roman', Times, serif; background-color: aliceblue;">
+    Username: <%= curruser.name %>
+    <br>
+    Email: <%= curruser.email %>
+</div>
+<br>
+<div style="font-size: x-large; font-family: 'Times New Roman', Times, serif; text-align: center; background-color: rgb(157, 226, 188);">Orders placed before:</div>
+<% for(let i=0;i<imgbought.length;i++){ %>
+    <div class="iphone_main">
+        <div class="iphone_img">
+            <img src="../<%= imgbought[i] %>" alt="">
+        </div>
+        <div class="iphone_desc" style="background-color: cadetblue;">
+            <h1 style="font-family: 'Times New Roman', Times, serif; font-weight: 900;"><%= prodnamebought[i] %></h1>
+            <h3 style="font-family: sans-serif; font-weight: 600;"><%= pricebought[i] %></h3>
+            <h3>Qty: <%= countbought[i] %></h3>
+            <br>
+        </div>
+    </div>
+<% } %>
