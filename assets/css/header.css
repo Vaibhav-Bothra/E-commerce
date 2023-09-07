@@ -84,3 +84,55 @@
     cursor: pointer;
     color: rgb(124, 204, 191);
 }
+
+@media screen and (max-width: 1050px){
+    #search{
+        width: 42%;
+    }
+    #link{
+        width: 34%;
+    }
+}
+
+@media screen and (max-width: 920px){
+    #search{
+        width: 31%;
+    }
+    #link{
+        width: 39%;
+        font-size: small;
+    }
+    #others{
+        width: 20%;
+    }
+}
+
+@media screen and (max-width: 700px){
+    #search{
+        width: 25%;
+        font-size: small;
+    }
+    #link{
+        width: 43%;
+        font-size: smaller;
+    }
+    #loginbtn{
+        font-size: small;
+    }
+    #others{
+        width: 22%;
+    }
+}
+
+@media screen and (max-width:610px){
+    #link{
+        width: 45%;
+        font-size: x-small;
+    }
+    #loginbtn{
+        font-size: x-small;
+    }
+    #others{
+        width: 20%;
+    }
+}

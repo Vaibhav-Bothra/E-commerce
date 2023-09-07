@@ -73,7 +73,7 @@ ul{
 .footer-col .social-links a{
     display: inline-block;
     height: 10%;
-    width: 10%;
+    width: 15%;
     background-color: rgba(255,255,255,0.2);
     margin:0 3% 3% 0;
     text-align: center;
@@ -96,14 +96,32 @@ ul{
     text-align: center;
 }
 
-@media(max-width: 767px){
+@media screen and (max-width: 930px) {
+    .about-section p{
+        font-size: 140%;
+    }
+}
+
+@media(max-width: 700px){
     .footer-col{
-        width: 50%;
+        width: 33%;
         margin-bottom: 30px;
+    }
+    .footer-col h3{
+        font-size: medium;
+    }
+    .footer-col ul li{
+        font-size: 14px;
+    }
+    .footer-col .social-links a{
+        width: 20%;
     }
 }
 @media(max-width: 574px){
     .footer-col{
-        width: 100%;
+        width: 50%;
+    }
+    .footer-col ul li{
+        font-size: 14px;
     }
 }

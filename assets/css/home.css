@@ -93,6 +93,24 @@ body{
 }
 
 .phone{
+    width: 16.6%;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: large;
+    color: rgb(90, 21, 42);
+    font-weight: 500;
+}
+
+.electronic{
+    width: 25%;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: large;
+    color: rgb(90, 21, 42);
+    font-weight: 500;
+}
+
+.fash{
     flex-grow: 1;
     text-align: center;
     font-family: sans-serif;
@@ -101,7 +119,25 @@ body{
     font-weight: 500;
 }
 
-.vl{
+.sport{
+    width: 33%;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: large;
+    color: rgb(90, 21, 42);
+    font-weight: 500;
+}
+
+.appliance{
+    flex-grow: 1;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: large;
+    color: rgb(90, 21, 42);
+    font-weight: 500;
+}
+
+.vl1, .vl2, .vl3, .vl4, .vl5{
     border-left: 2px solid black;
     height: 100%;
 }
@@ -149,4 +185,46 @@ body{
 
 #appliances div img:hover{
     height:82%;
+}
+
+@media screen and (max-width: 920px){
+    #phones div img{
+        width: 75%;
+    }
+    #electronics div img{
+        height: 70%;
+        width: 85%;
+    }
+    #sportsfitness div img{
+        width: 75%;
+    }
+    #appliances div img{
+        width: 75%;
+    }
+    .appliance, .phone, .electronic, .fash, .sport{
+        font-size: medium;
+    }
+}
+
+@media screen and (max-width:750px) {
+    #phones{
+        flex-wrap: wrap;
+        height: 120vh;
+    }
+    .phone{
+        width: 33%;
+        height: 55vh;
+    }
+    #phones div img{
+        width: 65%;
+    }
+    .vl1{
+        height: 0vh;
+    }
+}
+
+@media screen and (max-width:610px){
+    .phone{
+        width: 32%;
+    }
 }

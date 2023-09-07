@@ -11,9 +11,12 @@ btn.addEventListener('click', function(){
     }
     for(let i=0;i<8;i++){
         let c = b[i].id;
-        if(c.includes(a.value)){   
+        let val = a.value;
+        let d = val.split(" ").join("");
+        if(c.includes(d)){   
             b[i].style.display="block";
-            b[i].style.width="80%";
+            b[i].style.width="250%";
+            b[i].style.fontSize="large";
         }
     }
 });
