@@ -3,5 +3,6 @@ const router = express.Router();
 const adminController = require('../controllers/adminController');
 
 router.get('/signin',adminController.signin);
+router.get('/main',adminController.profile);
 
 module.exports = router;

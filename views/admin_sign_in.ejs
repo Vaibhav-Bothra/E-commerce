@@ -1,21 +1,21 @@
-<link rel="stylesheet" href="css/user_sign_in.css">
+<link rel="stylesheet" href="/css/user_sign_in.css">
 
-<div class="logo1"><img  src="logo.jpg" alt=""></div> 
-<div class="login-container">
+<!-- <div class="logo1"><img  src="logo.jpg" alt=""></div>  -->
+<div class="login-container" style="height: 60%;">
     <div class="login">
         <h1 style="color: rgb(0, 0, 0);">LOGIN</h1>
     </div>
     
-    <form action="/login" method="post">
+    <form action="/users/create-session" method="post">
         <div class="user">
-            <h3>Username:</h3>
-            <i class="fa fa-user"></i>
-            <input type="text" style="color: black" name="username" id="us" placeholder="Enter your Username">
+            <h3>E-mail Id:</h3>
+            <i class="fa fa-envelope"></i>
+            <input type="text" style="color: black" name="email" id="us" placeholder="Enter your E-mail" required>
         </div>
         <div class="pwd">
             <h3>Password:</h3>
             <i class="fa fa-lock"></i>
-            <input type="password" style="color: black;" name="password" id="pd" placeholder="Enter your password">
+            <input type="password" style="color: black;" name="password" id="pd" placeholder="Enter your password" required>
         </div>
         <div class="sub">
             <button class="btn1">Submit</button>

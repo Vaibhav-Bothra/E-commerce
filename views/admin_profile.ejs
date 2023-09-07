@@ -1,0 +1,31 @@
+<link rel="stylesheet" href="/css/admin_profile.css">
+
+<h1 style="text-align: center; font-family: 'Times New Roman', Times, serif; text-decoration: underline;">Orders Of All Users</h1>
+<div class="maindabba">
+    <% for(let i=0;i<order_imgs.length;i++){ %>
+            <div class="users">
+            <h2><%= order_users[i].name %></h2>
+            <div class="singleuser">
+            <% for(let j=0;j<order_imgs[i].length;j++){ %>
+                <div class="single">
+                    <h4>Product Name: <%= order_prodnames[i][j] %></h4>
+                    <img src="../<%= order_imgs[i][j] %>" alt="">
+                    <h5>Price: <%= order_prices[i][j] %></h5>
+                    <h5>Quantity: <%= order_count_items[i][j] %></h5>
+                </div>
+            <% } %>
+            </div>
+        </div>
+    <% } %>
+</div>
+
+<h1 style="text-align: center; font-family: 'Times New Roman', Times, serif; text-decoration: underline;">Reviews Of All Users</h1>
+<div class="reviews">
+    <% for(let i=0;i<all_users.length;i++){ %>
+        <div class="singlereview">
+            <h4 style="text-align: center; font-weight: 700;">Product Name: <%= prod[i] %></h4>
+            <h5>Review: <%= description[i] %></h5>
+            <h5>Username: <%= all_users[i] %></h5>
+        </div>
+    <% } %>
+</div>

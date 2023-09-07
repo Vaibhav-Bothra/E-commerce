@@ -1,0 +1,44 @@
+.users{
+    display: flex;
+}
+
+.users h2{
+    font-weight: 700;
+    width: 20%;
+    text-align: center;
+    margin: auto;
+}
+
+.singleuser{
+    margin-bottom: 2%;
+    height: fit-content;
+    width: 80%;
+}
+
+.single{
+    padding: 2%;
+    background-color: rgb(120, 233, 186);
+    margin-bottom: 1%;
+    font-family: sans-serif;
+    border-bottom: 2px solid black;
+}
+
+.single img{
+    width: 20%;
+    height: 20%;
+}
+
+.single h4{
+    font-weight: 600;
+}
+
+.reviews{
+    display: flex;
+    flex-direction: column;
+}
+
+.singlereview{
+    width: 100%;
+    background-color: rgb(156, 236, 236);
+    margin-bottom: 2%;
+}
