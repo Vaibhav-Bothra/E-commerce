@@ -120,12 +120,16 @@ module.exports.buy = async function (req, res) {
     await Cart.findOne({user: req.user._id}).then((order)=>{
         Orders.findOne({user: req.user._id}).then((ele)=>{
             if(!ele){
+                console.log(ele);
+                console.log(order);
                 Orders.create({
                     img: order.img,
                     prodname: order.prodname,
                     price: order.price,
                     count_item: order.count_item,
                     user: order.user
+                }).then((user)=>{
+                    console.log(user);
                 });
             }else{
                 for(let i=0;i<order.img.length;i++){
@@ -143,7 +147,7 @@ module.exports.buy = async function (req, res) {
             }
         })
         Cart.findOneAndDelete({user: req.user._id}).then((del)=>{
-            console.log(del);
+            // console.log(del);
         })
     })
     req.flash('success','Orders placed succesfully.');
