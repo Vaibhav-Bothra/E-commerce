@@ -9,7 +9,7 @@
     background-color: rgb(194, 204, 188);
     justify-content: center;
     text-align: center;
-    height: 75%;
+    height: 85%;
     box-sizing: border-box;
     padding-top: 2%;
     /* background-color: rgba(255, 255, 255, 0.171); */
@@ -36,7 +36,7 @@
     padding-left: 88px;
 }
 
-.pwd h3, .mail h3{    
+.pwd h3, .mail h3, .address h3{    
     font-size: 20px;
     text-align: left;
     margin-bottom: 10px;
@@ -94,4 +94,7 @@
 }
 ::placeholder{
     color: black;
+}
+.address{
+    margin-top: -5%;
 }

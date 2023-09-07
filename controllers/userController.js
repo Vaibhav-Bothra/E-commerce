@@ -16,7 +16,8 @@ module.exports.create = function(req,res){
             User.create({
                 email: req.body.email,
                 password: req.body.password,
-                name: req.body.name
+                name: req.body.name,
+                address: req.body.address
             }).then((user)=>{
                 console.log(user);
                 return res.redirect('/users/signin');
@@ -28,6 +29,7 @@ module.exports.create = function(req,res){
 }
 
 module.exports.createSession = function(req, res){
+    req.flash('success','Logged in successfully!!');
     return res.redirect('/');
 }
 
@@ -37,6 +39,7 @@ module.exports.signOut = function(req,res){
             console.log("Error in logging out of the page:",err);
             return res.redirect('back');
         }
+        req.flash('success','You have logged out successfully!');
         return res.redirect('/');
     });
 }

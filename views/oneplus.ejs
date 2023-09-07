@@ -1,0 +1,18 @@
+<link rel="stylesheet" href="/css/iphone.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+
+<% for(let i=0;i<oneplus_arr.length;i++) {%>
+    <div class="iphone_main">
+        <div class="iphone_img">
+            <img src="<%= oneplus_arr[i][0] %>" alt="">
+        </div>
+        <div class="iphone_desc" style="background-color: rgb(142, 245, 219);">
+            <h1 style="font-family: 'Times New Roman', Times, serif; font-weight: 900;"><%= oneplus_arr[i][1] %></h1>
+            <span class="bi bi-star-fill yellow-color" style="color: rgb(233, 177, 74);"> </span><span class="bi bi-star-fill yellow-color" style="color: rgb(233, 177, 74);"> </span><span class="bi bi-star-fill yellow-color" style="color: rgb(233, 177, 74);"> </span><span class="bi bi-star-fill yellow-color" style="color: rgb(233, 177, 74);"> </span><span class="bi bi-star-fill yellow-color" style="color: rgb(233, 177, 74);"> </span>
+            <h4 style="font-family: sans-serif; font-weight: 500;"><span style="font-weight: 600; text-decoration: underline;">Description:</span>&nbsp;&nbsp;<%= oneplus_arr[i][2] %></h4>
+            <h3 style="font-family: sans-serif; font-weight: 600;"><%= oneplus_arr[i][3] %></h3>
+            <br>
+            <a href="/users/cart/?key=oneplus&key2=<%= oneplus_arr[i][4] %>"><button type="button" class="btn btn-primary" id="loginbtn" style="width:25%; font-size: large;">Add to Cart</button></a>
+        </div>
+    </div>
+<% } %></link>

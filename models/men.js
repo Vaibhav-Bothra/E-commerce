@@ -2,29 +2,27 @@ const mongoose = require('mongoose');
 
 const db = require('../config/mongoose');
 
-const userSchema = new mongoose.Schema({
-    email: {
+const menSchema = new mongoose.Schema({
+    img: {
         type: String,
         required: true,
         unique: true
     },
-    name: {
+    prodname: {
         type: String,
         required: true
     },
-    password: {
+    desc: {
         type: String,
         required: true
     },
-    address: {
+    price: {
         type: String,
         required: true
     }
-},{
-    timestamps: true
 });
 
 mongoose.pluralize(null);
-const User = db.model('User', userSchema);
+const Men = db.model('men', menSchema);
 
-module.exports = User;
+module.exports = Men;

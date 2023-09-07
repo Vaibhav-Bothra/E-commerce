@@ -11,6 +11,7 @@ passport.use(new LocalStrategy({
     function(req,email,password,done){
         User.findOne({email: email}).then((user)=>{
             if(!user || user.password != password){
+                req.flash('error','Invalid Username/Password');
                 return done(null,false);
             }
             return done(null,user);

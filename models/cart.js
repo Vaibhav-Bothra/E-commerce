@@ -5,20 +5,17 @@ const db = require('../config/mongoose');
 const cartSchema = new mongoose.Schema({
     img: [
         {
-        type: String,
-        unique: true
+        type: String
         }
     ],
     prodname: [
         {
-        type: String,
-        unique: true
+        type: String
         }
     ],
     price: [
         {
-        type: String,
-        unique: true
+        type: String
         }
     ],
     count_item: [

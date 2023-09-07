@@ -34,6 +34,7 @@ module.exports.add = async function(req,res){
             }
         })
     });
+    req.flash('success',"Item added to Cart!!");
     return res.redirect('back');
 };
 
@@ -115,18 +116,36 @@ module.exports.delete = function(req,res){
     return res.redirect('/users/cartshow');
 }
 
-module.exports.buy = function (req, res) {
-    Cart.findOne({user: req.user._id}).then((order)=>{
-        Orders.create({
-            img: order.img,
-            prodname: order.prodname,
-            price: order.price,
-            count_item: order.count_item,
-            user: order.user
-        });
+module.exports.buy = async function (req, res) {
+    await Cart.findOne({user: req.user._id}).then((order)=>{
+        Orders.findOne({user: req.user._id}).then((ele)=>{
+            if(!ele){
+                Orders.create({
+                    img: order.img,
+                    prodname: order.prodname,
+                    price: order.price,
+                    count_item: order.count_item,
+                    user: order.user
+                });
+            }else{
+                for(let i=0;i<order.img.length;i++){
+                    let idx= ele.img.indexOf(order.img[i]);
+                    if(idx!=-1){
+                        ele.count_item[idx]+=order.count_item[i];
+                    }else{
+                        ele.img.push(order.img[i]);
+                        ele.prodname.push(order.prodname[i]);
+                        ele.price.push(order.price[i]);
+                        ele.count_item.push(order.count_item[i]);
+                    }
+                }
+                ele.save();
+            }
+        })
         Cart.findOneAndDelete({user: req.user._id}).then((del)=>{
             console.log(del);
         })
     })
+    req.flash('success','Orders placed succesfully.');
     return res.redirect('/');
 }
